@@ -129,14 +129,13 @@ button:hover {
   width: 100%;
 }
 
-
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 582px) {
   .container {
     padding: 75px 5% 5%;
   }
 }
 
-@media screen and (max-width: 1500px) and (min-width: 992px){
+@media screen and (max-width: 1500px) and (min-width: 583px){
   .container {
     padding: 130px 5% 5%;
   }

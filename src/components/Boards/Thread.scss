@@ -37,6 +37,10 @@
   color: $weird-cream;
 }
 
+.threadBlurb {
+  min-height: 80px;
+}
+
 .threadPoster {
   float: right !important;
 }
@@ -70,4 +74,15 @@
   object-fit: cover;
   background-color: $cozy-cream;
   border: 1px solid $cozy-cream;
+}
+//if screen can't fit a whole thread * container margins (530px * 1.1 = 583), make thread smaller
+@media only screen and (max-width: 582px) {
+  .threadWrapper {
+    width: 250px !important;
+    margin: 20px 10px 20px 10px;
+    //total width = 270px
+  }
+  .threadContent {
+    width: 250px !important;
+  }
 }

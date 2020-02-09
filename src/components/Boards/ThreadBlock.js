@@ -45,7 +45,9 @@ class ThreadBlock extends Component {
             {image !== null && <img className={styles.threadImage} src={image} alt={user.username} />}
             <div className={`${styles.threadText} card-body`}>
               {title !== null && <p className={`${styles.threadTitle} card-title`}>{title}</p>}
-              <p className={`${styles.threadBlurb} card-text`}>{blurb}</p>
+              <div className={styles.threadBlurb}>
+                <p className="card-text">{blurb}</p>
+              </div>
               <p className={styles.threadDate}>{date}</p>
             </div>
             <div className={styles.threadPoster}>
