@@ -46,7 +46,7 @@ class ThreadBlock extends Component {
             <div className={`${styles.threadText} card-body`}>
               {title !== null && <p className={`${styles.threadTitle} card-title`}>{title}</p>}
               <p className={`${styles.threadBlurb} card-text`}>{blurb}</p>
-              {<p className={styles.threadDate}>{date}</p>}
+              <p className={styles.threadDate}>{date}</p>
             </div>
             <div className={styles.threadPoster}>
               <Link to={{ pathname: profileURL }}>

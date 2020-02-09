@@ -38,8 +38,26 @@
 
 .threads {
   display: flex;
-  justify-content: space-between !important;
+  justify-content: flex-start !important;
   flex-flow: row wrap !important;
   //remove extra space around the thread block
-  margin-top: -40px !important;
+  margin: -40px auto 0px auto !important;
+}
+
+@media only screen and (max-width: 1086px) {
+  .threads {
+    width: 520px !important;
+  }
+}
+@media only screen
+  and (min-width: 1086px)
+  and (max-width: 1699px) {
+  .threads {
+    width: 1060px !important;
+  }
+}
+@media only screen and (min-width: 1699px) {
+  .threads {
+    width: 1590px !important;
+  }
 }

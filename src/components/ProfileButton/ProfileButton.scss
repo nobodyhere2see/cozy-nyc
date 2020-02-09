@@ -2,7 +2,7 @@
 
 // Resets
 .profileButton button {
-  box-shadow: none;
+  box-shadow: none
 }
 
 .profileButton button:hover {
@@ -12,13 +12,11 @@
 // Profile
 .profileButton {
   display: inline-block;
-  // overflow: hidden;
-  // width: 150px;
-  height: 50px;
+  height: 52px;
 }
 
 .userAvatar {
-  top: 0;
+  top: 0px;
   padding-left: 10px;
   overflow: auto;
   background: none;
@@ -44,7 +42,7 @@
   height: 50px;
   width: 50px;
   background-color: $cozy-cream;
-  //10px for userAvatar padding, 3px for userAvatar border 
+  //10px for userAvatar padding, 3px for userAvatar border
   left: -13px;
   top: -3px;
   position: relative;
@@ -68,6 +66,15 @@
   vertical-align: middle;
 }
 
+.auth {
+  //auth div height: 38, container height: 52 = 14... divide by 2
+  top: 7px;
+}
+//removing bottom padding from "sign up"
+.auth p ~ p {
+  margin-bottom: 0px;
+}
+
 .logoutButton {
   color: $weird-pink;
   background: none;
@@ -82,11 +89,6 @@
 
 a:hover {
   color: $cozy-pink !important;
-}
-
-//separates the "login" and "sign up" buttons by padding "sign up"
-.auth a ~ a{
-  padding-left: 10px;
 }
 
 /* changing navbar depending on theme based on body's class

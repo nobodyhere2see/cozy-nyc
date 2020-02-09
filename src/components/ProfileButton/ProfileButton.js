@@ -74,15 +74,19 @@ class ProfileButton extends Component {
             </div>
             <div className={styles.userAvatar}>
               <Link to={`/u/${user.username}`}>
-                <img className={styles.profileImage} src={profile.profileImg} alt={profile.username} />
+                <img className={styles.profileImage} src={profile.profileImg} alt={user.username} />
               </Link>
             </div>
           </div>
         )}
         {!user && (
           <div className={styles.auth}>
-            <Link to="/login">login</Link>
-            <Link to="/register">sign up</Link>
+            <p>
+              <Link to="/login">login</Link>
+            </p>
+            <p>
+              <Link to="/register">sign up</Link>
+            </p>
           </div>
         )}
         <div className="u-cf" />
