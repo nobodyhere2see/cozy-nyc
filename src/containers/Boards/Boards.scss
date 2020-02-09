@@ -40,24 +40,42 @@
   display: flex;
   justify-content: flex-start !important;
   flex-flow: row wrap !important;
-  //remove extra space around the thread block
+  //centers container around threads
   margin: -40px auto 0px auto !important;
 }
 
-@media only screen and (max-width: 1086px) {
+//media queries resize threads container according to screen font-size
+/*
+if screen size less than 2 threads * 1.1 for the page container margins then make container width only fit 1 thread
+530 * 2 * 1.1 = 1166
+less than that would be 1165
+*/
+@media only screen and (max-width: 1165px) {
   .threads {
-    width: 520px !important;
+    //fit 1 thread: thread width + two 40px margins = 450 + 80px = 530
+    width: 530px;
   }
 }
+/*
+if screen size less than 3 threads * 1.1  then make container width only fit 2 threads
+530 * 3 * 1.1 = 1749
+less than that would be 1748
+*/
 @media only screen
-  and (min-width: 1086px)
-  and (max-width: 1699px) {
+  and (min-width: 1166px)
+  and (max-width: 1748px) {
   .threads {
+    //fit 2 threads: 530 * 2
     width: 1060px !important;
   }
 }
-@media only screen and (min-width: 1699px) {
+/*
+if can fit 3 threads, fit all 3.
+min screen width = 530 * 3 * 1.1 = 1749
+*/
+@media only screen and (min-width: 1749px) {
   .threads {
+    ////fit 2 threads: 530 * 3
     width: 1590px !important;
   }
 }
